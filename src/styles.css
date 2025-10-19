@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --perspective: 1000px;
+}
+
+body {
+  perspective: var(--perspective);
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-2px) rotateX(2deg) rotateY(-2deg);
+}
+
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.ring-3d {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 10px 30px rgba(0,0,0,0.45);
+}
+
+
